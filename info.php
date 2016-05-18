@@ -32,7 +32,7 @@ if (defined('LEPTON_PATH')) {
 $module_directory	= 'vstats';
 $module_name 		= 'Visitor statistics';
 $module_function 	= 'tool';
-$module_version 	= '0.2.0';
+$module_version 	= '0.2.1';
 $module_platform	= '2.x';
 $module_author		= 'Ruud Eisinga, cms-lab';
 $module_home		= 'http://www.cms-lab.com';
