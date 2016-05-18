@@ -1,48 +1,48 @@
 <?php
 /**
- *
- * @category        admintools
- * @package         wbstats
- * @author          Ruud Eisinga - Dev4me
- * @link			http://www.dev4me.nl/
- * @license         http://www.gnu.org/licenses/gpl.html
- * @platform        WebsiteBaker 2.8.x
- * @requirements    PHP 5.2.2 and higher
- * @version         0.1.9
- * @lastmodified    Februari 20, 2015
+ * @module          Visitor statistics
+ * @author          Ruud Eisinga, cms-lab
+ * @copyright       2014-2016 Ruud Eisinga, cms-lab
+ * @link            http://www.cms-lab.com
+ * @license         see info.php
+ * @license_terms   see info.php
  *
  */
 
-defined('WB_PATH') OR die(header('Location: ../index.php'));
+// include class.secure.php to protect this file and the whole CMS!
+if (defined('LEPTON_PATH')) {	
+	include(LEPTON_PATH.'/framework/class.secure.php'); 
+} else {
+	$oneback = "../";
+	$root = $oneback;
+	$level = 1;
+	while (($level < 10) && (!file_exists($root.'/framework/class.secure.php'))) {
+		$root .= $oneback;
+		$level += 1;
+	}
+	if (file_exists($root.'/framework/class.secure.php')) { 
+		include($root.'/framework/class.secure.php'); 
+	} else {
+		trigger_error(sprintf("[ <b>%s</b> ] Can't include class.secure.php!", $_SERVER['SCRIPT_NAME']), E_USER_ERROR);
+	}
+}
+// end include class.secure.php
 ?>
 <div class="full" style="height:auto;">
 	<h3><?php echo $help['installhead'] ?></h3>
 	<?php echo $help['installbody'] ?>
-	<br/><pre>include (WB_PATH.'/modules/wbstats/count.php');</pre><br/>
-	<?php if (defined('WB_VERSION') && version_compare(WB_VERSION,'2.8.2','>')) { ?>
+	<br/><pre>include (LEPTON_PATH.'/modules/vstats/count.php');</pre><br/>
 	<br/>
-	<h3><?php echo $help['refererhead'] ?></h3>
-	<?php echo $help['refererbody'] ?>
-	<br/><pre>$referer = $_SERVER['HTTP_REFERER'];</pre><br/>
-	<?php } ?>
-	<?php if (!defined('WB_VERSION') || version_compare(WB_VERSION,'2.8.2','<')) { ?>
-	<br/>
-	<h3><?php echo $help['jqueryhead'] ?></h3>
-	<?php echo $help['jquerybody'] ?><br/>
-	<?php } ?>
-	<br/>
-	<h3>Dev4me</h3>
-	<div style="float: right"><a href="http://www.dev4me.nl" target="_blank"><img src="<?php echo WB_URL ?>/modules/wbstats/logo.png" alt="" /></a></div>
+	<h3>CMS-LAB</h3>
+	<div style="float: right"><a href="http://cms-lab.com" target="_blank"><img src="<?php echo LEPTON_URL ?>/modules/vstats/logo.png" alt="" /></a></div>
 	<?php echo $help['donate'] ?><br/>
 	<br/>
 	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-		<input type="hidden" name="cmd" value="_s-xclick">
-		<input type="hidden" name="hosted_button_id" value="FNER9H6GSUN5L">
-		<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-		<img alt="" border="0" src="https://www.paypalobjects.com/nl_NL/i/scr/pixel.gif" width="1" height="1">
-	</form>
-	
-	
+		<input name="cmd" type="hidden" value="_s-xclick" /> 
+		<input name="hosted_button_id" type="hidden" value="DF6TFNAE7F7DJ" /> 
+		<input alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" type="image" /> 
+		<img src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" alt="" width="1" height="1" border="0" />
+	</form>	
 	<div style="clear:both"></div>
 </div>
 

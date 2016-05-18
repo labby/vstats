@@ -29,5 +29,11 @@ if (defined('LEPTON_PATH')) {
 }
 // end include class.secure.php
 
-?>
+// Checking Requirements
 
+$PRECHECK['VERSION']        = array(
+    'VERSION' => '2.1.0',
+    'OPERATOR' => '>='
+);
+
+?>

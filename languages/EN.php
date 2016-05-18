@@ -99,13 +99,13 @@ $help = array(
 	'installbody' 	=> 'To include the counter to your website add the following line to your template(s), somewhere in the first &lt;?php ... ?&gt; block;',
 	'refererhead' 	=> 'Enabling referer information in WB2.8.3 and later',
 	'refererbody' 	=> 'To enable referer and searchkey detection in WebsiteBaker version 2.8.3 and later, add the following line to the <strong>config.php</strong> in the root of your website, 
-						just before the line: <i>require_once(WB_PATH.\'/framework/initialize.php\');</i>',
+						just before the line: <i>require_once(LEPTON_PATH.\'/framework/initialize.php\');</i>',
 	'jqueryhead' 	=> 'jQuery problems',
 	'jquerybody' 	=> 'In older WebsiteBaker Admin themes (version 2.8.1 and 2.7) jQuery is not loaded correctly in the head section of the theme.<br/>
 						You must change this by moving the lines starting with &lt;script&gt; in the bottom of of the footer.htt file to the &lt;head&gt; section of the file header.htt.<br/>
 						You can find these files in the directory /templates/{your_theme}/templates/<br/><br/>
 						<strong>Note:</strong> This tool wil not show any statistics if jQuery is not initialized correctly!',
-	'donate'		=> 'This module is created by Dev4me and is made available for the WebsiteBaker community for free.<br/>If you like this module, please consider making a donation through paypal.'
+	'donate'		=> 'This module is reworked by CMS-LAB and is made available for LEPTON for free.<br/>If you like this module, please consider making a donation through paypal.'
 
 );
 	

@@ -1,3 +1,13 @@
+/**
+ * @module          Visitor statistics
+ * @author          Ruud Eisinga, cms-lab
+ * @copyright       2014-2016 Ruud Eisinga, cms-lab
+ * @link            http://www.cms-lab.com
+ * @license         see info.php
+ * @license_terms   see info.php
+ *
+ */
+ 
 $(function(){
 	$('.bar, .vbar, .expand').poshytip({
 		className: 'tip-twitter',

@@ -1,17 +1,33 @@
 <?php
+
 /**
- *
- * @category        admintools
- * @package         wbstats
- * @author          Ruud Eisinga - Dev4me
- * @link			http://www.dev4me.nl/
- * @license         http://www.gnu.org/licenses/gpl.html
- * @platform        WebsiteBaker 2.8.x
- * @requirements    PHP 5.2.2 and higher
- * @version         0.1.8
- * @lastmodified    October 22, 2014
+ * @module          Visitor statistics
+ * @author          Ruud Eisinga, cms-lab
+ * @copyright       2014-2016 Ruud Eisinga, cms-lab
+ * @link            http://www.cms-lab.com
+ * @license         see info.php
+ * @license_terms   see info.php
  *
  */
+
+// include class.secure.php to protect this file and the whole CMS!
+if (defined('LEPTON_PATH')) {	
+	include(LEPTON_PATH.'/framework/class.secure.php'); 
+} else {
+	$oneback = "../";
+	$root = $oneback;
+	$level = 1;
+	while (($level < 10) && (!file_exists($root.'/framework/class.secure.php'))) {
+		$root .= $oneback;
+		$level += 1;
+	}
+	if (file_exists($root.'/framework/class.secure.php')) { 
+		include($root.'/framework/class.secure.php'); 
+	} else {
+		trigger_error(sprintf("[ <b>%s</b> ] Can't include class.secure.php!", $_SERVER['SCRIPT_NAME']), E_USER_ERROR);
+	}
+}
+// end include class.secure.php
  
 $module_description = 'Statistiken der Website';
 
@@ -98,14 +114,7 @@ $code2lang = array(
 $help = array(
 		'installhead' 	=> 'Installation und Einrichtung',
 		'installbody' 	=> 'Um den Z&auml;hler in deine Webseite einzubinden, f&uuml;ge nachfolgene Codezeile in dein(e) Template(s) irgendwo in den ersten PHP-abschnitt zwischen <?php ... ?> ein',
-		'refererhead' 	=> 'Referer-Informationen in WB 2.8.3 und neuer',
-		'refererbody' 	=> 'F&uuml;r die WebsiteBaker Versionen 2.8.3 und neuer ist es notwendig, unten stehene Codezeile in die Datei <strong>config.php</strong> im WB-Hauptverzeichnis unmittelbar vor dieser Zeile hier einzuf&uuml;gen:  <i>require_once(WB_PATH.\'/framework/initialize.php\');</i>',
-		'jqueryhead' 	=> 'JQuery-Probleme',
-		'jquerybody' 	=> 'In &auml;lteren WebsiteBaker-Admin-Themes (Version 2.8.1 und 2.7) wird JQuery nicht korrekt im Head-Bereich der Datei eingebunden.<br/>
-							Dies kann durch das Verschieben der Code-Zeilen, die mit &lt;script&gt; beginnen von der Datei footer.htt zur Datei header.htt korrigiert werden.<br/>
-							Beide Dateien findest du in im Ordner /templates/{dein_theme}/templates.<br/><br/>
-							<strong>Hinweis:</strong> Das Modul kann keine Statistiken zeigen, wenn JQuery nicht korrekt initialisiert wird.',
-		'donate'		=> 'Dieses Modul wurde von Dev4me programmiert und der WebsiteBaker-Community frei zur Verf&uuml;gung gestellt.<br/>Wenn Ihnen dieses Modul gef&auml;llt, w&uuml;rden wir uns &uuml;ber eine kleine Spende via PayPal freuen..'
+		'donate'		=> 'Dieses Modul wurde von CMS-LAB überarbeitet und für LEPTON frei zur Verf&uuml;gung gestellt.<br/>Wenn Ihnen dieses Modul gef&auml;llt, w&uuml;rden wir uns &uuml;ber eine kleine Spende via PayPal freuen..'
 );
 
 ?>
