@@ -93,7 +93,7 @@ class stats {
 			if($result['online']) {
 				$result['online_title'] = '<table class=\'popup\' cellpadding=\'2\'><tr><th colspan=\'4\'>'.$WS['CURRENTONLINE'].'</th></tr>';
 				while($res = $query->fetchRow()) {
-					$result['online_title']  .= '<tr><td>'.date(DATE_FORMAT,$res['online']+DateTimeZone).'</td><td>'.date(TIME_FORMAT,$res['online']+DateTimeZone).'</td><td>'.$res['ip'].'</td><td>'.$res['page'].'</td></tr>';
+					$result['online_title']  .= '<tr><td>'.date(DATE_FORMAT,$res['online']).'</td><td>'.date(TIME_FORMAT,$res['online']).'</td><td>'.$res['ip'].'</td><td>'.$res['page'].'</td></tr>';
 				}
 				$result['online_title']  .= '</table>';
 				$result['online_title'] = htmlspecialchars($result['online_title']);
@@ -134,7 +134,7 @@ class stats {
 			$start = mktime(date("H")-$hour, 0, 0, date("n"), date("j"), date("Y")) ;
 			$end = mktime(date("H")-$hour, 59, 59, date("n"), date("j"), date("Y")) ;
 			$result['bar'][$hour]['data'] = $database->get_one("SELECT count(id) FROM ".$table_ips." WHERE `time`>='$start' AND `time`<=$end");
-			$result['bar'][$hour]['title'] = date("H:i",$start+TIMEZONE)." - ".date("G:i",$end+TIMEZONE);			
+			$result['bar'][$hour]['title'] = date("H:i",$start)." - ".date("G:i",$end);			
 		}
 		// last 30 days
 		for($day=29; $day>=0; $day--) {
