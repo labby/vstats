@@ -135,10 +135,10 @@ $('.pags').live("click",function(e) {
 		?>
 		</tr>
 		<tr height="20">
-			<td colspan="6" width="25%" class="timeline"><?PHP echo date("H:i",mktime(date("H")-23, 0, 0, date("n"), date("j"), date("Y"))+TIMEZONE); ?></td>
-			<td colspan="6" width="25%" class="timeline"><?PHP echo date("H:i",mktime(date("H")-17, 0, 0, date("n"), date("j"), date("Y"))+TIMEZONE); ?></td>
-			<td colspan="6" width="25%" class="timeline"><?PHP echo date("H:i",mktime(date("H")-11, 0, 0, date("n"), date("j"), date("Y"))+TIMEZONE); ?></td>
-			<td colspan="6" width="25%" class="timeline"><?PHP echo date("H:i",mktime(date("H")-5, 0, 0, date("n"), date("j"), date("Y"))+TIMEZONE); ?></td>
+			<td colspan="6" width="25%" class="timeline"><?PHP echo date("H:i",mktime(date("H")-23, 0, 0, date("n"), date("j"), date("Y")) ); ?></td>
+			<td colspan="6" width="25%" class="timeline"><?PHP echo date("H:i",mktime(date("H")-17, 0, 0, date("n"), date("j"), date("Y")) ); ?></td>
+			<td colspan="6" width="25%" class="timeline"><?PHP echo date("H:i",mktime(date("H")-11, 0, 0, date("n"), date("j"), date("Y")) ); ?></td>
+			<td colspan="6" width="25%" class="timeline"><?PHP echo date("H:i",mktime(date("H")-5, 0, 0, date("n"), date("j"), date("Y")) ); ?></td>
 		</tr>
 	</table>
 </div>
