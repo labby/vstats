@@ -20,4 +20,4 @@ include (LEPTON_PATH.'/modules/vstats/count.php');
 
 
 [1]: http://lepton-cms.org "LEPTON CMS"
-[2]: http://www.lepton-cms.com/lepador/admintools/vstats.php
+[2]: http://www.lepton-cms.com/lepador/admintools/visitor-statistics.php
