@@ -28,7 +28,7 @@ if (defined('LEPTON_PATH')) {
 	}
 }
 // end include class.secure.php
- 
+ ?>
 <script type="text/javascript" src="<?php echo LEPTON_URL ?>/modules/vstats/js/jquery.poshytip.js"></script>
 <div id="loading" class="box" style="display:none;"><?php echo $WS['PLEASEWAIT'] ?></div>
 <div id="container">
@@ -38,4 +38,3 @@ if (defined('LEPTON_PATH')) {
   <a href="<?php echo $module_history_link  ?>"><?php echo $WS['MENU3'] ?></a>
   <a style="float:right" href="<?php echo $module_help_link  ?>"><?php echo $WS['MENU4'] ?></a>
 </div>
-?>
