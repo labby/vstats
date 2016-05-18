@@ -34,11 +34,11 @@ require_once(!file_exists($lang) ? (dirname(__FILE__)) . '/languages/EN.php' : $
 require_once('class.stats.php');
 
 $admintool_url = ADMIN_URL .'/admintools/index.php';
-$module_link = ADMIN_URL .'/admintools/tool.php?tool=wbstats';
-$module_overview_link = ADMIN_URL .'/admintools/tool.php?tool=wbstats&overview';
-$module_visitors_link = ADMIN_URL .'/admintools/tool.php?tool=wbstats&visitors';
-$module_history_link = ADMIN_URL .'/admintools/tool.php?tool=wbstats&history';
-$module_help_link = ADMIN_URL .'/admintools/tool.php?tool=wbstats&help';
+$module_link = ADMIN_URL .'/admintools/tool.php?tool=vstats';
+$module_overview_link = ADMIN_URL .'/admintools/tool.php?tool=vstats&overview';
+$module_visitors_link = ADMIN_URL .'/admintools/tool.php?tool=vstats&visitors';
+$module_history_link = ADMIN_URL .'/admintools/tool.php?tool=vstats&history';
+$module_help_link = ADMIN_URL .'/admintools/tool.php?tool=vstats&help';
 
 
 
